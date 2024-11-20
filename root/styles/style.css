@@ -1,0 +1,109 @@
+
+		
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        color: #ffffff;
+        background: linear-gradient(135deg, #1d2b64, #f8cdda);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .quiz-container {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        width: 90%;
+        max-width: 600px;
+        animation: fadeIn 0.9s ease;
+        text-align: center;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        font-size: 2rem;
+    }
+
+    .option {
+        display: block;
+        margin: 10px 0;
+        padding: 15px;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.2);
+        color: #ffffff;
+        transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+    }
+
+    .option:hover {
+        background: #ff6f61;
+        transform: translateY(-3px);
+    }
+
+    .option.correct {
+        background-color: #4caf50;
+        color: white;
+    }
+
+    .option.wrong {
+        background-color: #f44336;
+        color: white;
+    }
+
+    button {
+        padding: 10px;
+        background: #ff6f61;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+        font-size: 1rem;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        display: block;
+        margin: 20px auto;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background: #ff3b2e;
+    }
+
+    #scoreContainer {
+        margin-top: 20px;
+        font-size: 1.2rem;
+    }
+
+    @keyframes fadeIn {
+        from { 
+        		opacity: 0; transform: translateY(-20px); 
+        }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    // Responsive Design for other systems
+		
+    @media (max-width: 600px) {
+        body {
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        button {
+            font-size: 0.9rem;
+        }
+    }
+		
